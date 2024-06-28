@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'Bd_mascotas/base.html' %}
+{% load static %}
+{% block content %}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PetFriends</title>
+
+  <!-- Bootstrap -->
+
+  
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="slider">
+        <div class="img-responsive">
+          <ul class="bxslider">
+            <li><img src="{%static 'Bd_mascotas/img/pet1.png'%}" alt="" width="1200px" height="500px"/></li>
+            <li><img src="{%static 'Bd_mascotas/img/pet2.png'%}" alt="" width="1200px" height="500px"/></li>
+            <li><img src="{%static 'Bd_mascotas/img/pet3.png'%}" alt="" width="1200px" height="500px"/></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="text-center">
+          <h2>Nuestro Proposito</h2>
+          <p>En nuestra organización, el propósito fundamental es promover el bienestar animal a través de la adopción responsable y la educación sobre el cuidado de mascotas. Nos dedicamos a brindar un hogar amoroso a animales abandonados y maltratados, ofreciéndoles una segunda oportunidad para vivir una vida plena y feliz.</p>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-md-offset-3">
+  <div class="container">
+    <div class="row">
+      <div class="box">
+        <div class="col-md-4">
+          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.4s">
+            <h4>Belleza</h4>
+            <div class="icon">
+              <i class="fa fa-heart-o fa-3x"></i>
+            </div>
+            <p>La peluqueria canina tiene como finalidad la preservacion de la salud de tu mascota especializandonos en la higiene y la estetica</p>
+            <div class="ficon">
+              <a href="/services/" class="btn btn-default" role="button">Leer Mas</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="1.0s">
+            <h4>Productos</h4>
+            <div class="icon">
+              <i class="fa fa-user fa-4x"></i>
+            </div>
+            <p>Venta de alimentos, accesorios y linea de aseo , mascotas ornomentales, son aquellas que por sus cualidades esteticas se utilizan para adornar el entorno
+              mas inmediato o lugares comunes que por diversos motivos son decorados , como peces </p>
+            <div class="ficon">
+              <a href="/portafolio/" class="btn btn-default" role="button">Leer Mas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="text-center">
+          <h2>Adopta una mascota</h2>
+          <p>¡Haz la diferencia en la vida de un peludo amigo! Adopta una mascota y llena tu hogar de amor y alegría. Descubre cómo puedes cambiar vidas y encontrar a tu compañero perfecto. ¡Adopta, no compres, y sé parte de una historia de amor incondicional!
+          </p>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="grid">
+      <figure class="effect-zoe">
+        <img src="{%static 'Bd_mascotas/img/perro re 1.jpg'%}" alt="img25" width="480"  height="320" />
+        <figcaption>
+          <h2><span>Chester</span></h2>
+          <p class="icon-links">
+            <a href="#"><span class="icon-heart"></span></a>
+            <a href="#"><span class="icon-eye"></span></a>
+            <a href="#"><span class="icon-paper-clip"></span></a>
+          </p>
+          <p class="description">Chester había sufrido malos tratos de su anterior dueño. Por este motivo no se fiaba de los humanos y 
+            no dejaba que nadie lo tocase, Con paciencia y ternura Chester empezó a confiar de nuevo en las personas. Sus problemas de piel 
+            y uñas fueron tratados y fue alimentado como debe serlo cualquier ser vivo.</p>
+        </figcaption>
+      </figure>
+      <figure class="effect-zoe">
+        <img src="{%static 'Bd_mascotas/img/perro re 2.jpg'%}" alt="img26"  width="480"  height="320"/>
+        <figcaption>
+          <h2><span>Mango</span></h2>
+          <p class="icon-links">
+            <a href="#"><span class="icon-heart"></span></a>
+            <a href="#"><span class="icon-eye"></span></a>
+            <a href="#"><span class="icon-paper-clip"></span></a>
+          </p>
+          <p class="description">Mango fue encontrado demacrado y con un aspecto lamentable. La sarna había hecho estragos en su piel y apenas le quedaba pelo. 
+            Tenía el cuerpo lleno de llagas y una de sus patas parecía torcida en un ángulo muy poco natural. Con amor, comida y un tratamiento para sus heridas 
+            Mango es ahora un perro muy diferente al que era cuando vivía en la calle.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="grid">
+      <figure class="effect-zoe">
+        <img src="{%static 'Bd_mascotas/img/perro re 3.jpg'%}" alt="img27" width="480"  height="320"/>
+        <figcaption>
+          <h2><span>Chedar</span></h2>
+          <p class="icon-links">
+            <a href="#"><span class="icon-heart"></span></a>
+            <a href="#"><span class="icon-eye"></span></a>
+            <a href="#"><span class="icon-paper-clip"></span></a>
+          </p>
+          <p class="description">Cuando Chedar fue recogido de la calle apenas podía moverse. Era poco más que un esqueleto andante. Su piel estaba infectada de sarna y llena de heridas. Hoy en día, la imagen de Chedar dista mucho de aquella tan famélica que fue antes. Con un pelo envidiable y una alegría de vivir inmensa, este can corretea alegre junto a otros perros también rescatados.</p>
+        </figcaption>
+      </figure>
+      <figure class="effect-zoe">
+        <img src="{%static 'Bd_mascotas/img/perro re 4.jpg'%}" alt="img30" width="480"  height="320" />
+        <figcaption>
+          <h2><span>Nero</span></h2>
+          <p class="icon-links">
+            <a href="#"><span class="icon-heart"></span></a>
+            <a href="#"><span class="icon-eye"></span></a>
+            <a href="#"><span class="icon-paper-clip"></span></a>
+          </p>
+          <p class="description">Nero sufrió malos tratos por parte de algún humano desconsiderado, así como problemas en la piel, heridas y una de sus patas estaba rota.Con los cuidados adecuados Nero es ahora como podéis ver en la foto. Es un perro muy cariñoso y solo busca la compañía humana. No deja escapar ni un detalle de lo que pasa a su alrededor levantando sus grandes orejas.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+
+ 
+
+
+
+</body>
+{% endblock %}
+
+</html>

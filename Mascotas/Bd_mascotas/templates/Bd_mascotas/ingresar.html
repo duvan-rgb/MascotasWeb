@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'Bd_mascotas/base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar</title>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+</head>
+<body>
+        <div class="container">
+          <div class="row contact-wrap">
+            <div class="col-md-8 col-md-offset-2">
+              <form action="" method="post" role="form" class="contactForm">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label>Nombre de usuario</label>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Tu Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                    <label>Contraseña</label>
+                  <input type="password" class="form-control" name="email" id="email" placeholder="Tu contraseña" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validation"></div>
+                </div>
+    
+                <div class="text"><a type="submit" class="btn btn-primary btn-lg" href="#">Iniciar</a>
+                <a type="submit" class="btn btn-primary btn-lg" href="/registrou/">Registrarme</a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      
+
+</body>
+{% endblock %}
+</html>

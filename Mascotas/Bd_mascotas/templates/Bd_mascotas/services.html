@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% extends 'Bd_mascotas/base.html' %}
+  {% load static %}
+  {% block content %}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PetFriends servicios</title>
+
+  <style>
+    .service-panel {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .service-panel img {
+      width: 100%;
+      height: auto;
+      max-height: 200px; 
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="service">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="text-center">
+            <h2>Servicios Ofrecidos</h2>
+            <p>A continuacion se muestran algunos de nuestros servicios
+              <br>
+            </p>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      {% for s in servicios %}
+      <div class="col-md-3 service-panel">
+        <div class="panel panel-default">
+          <img class="img-fluid" src="{{s.imagen.url}}" alt="">
+          <div class="panel-body">
+            <strong>Servicio:</strong> {{s.nom}} <br>
+            <strong>Precio:</strong> {{s.precio}} <br>
+            <strong>Descripción:</strong> {{s.descripcion}} <br>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!--<div class="container">
+    <div class="row">
+      <div class="box">
+        <div class="col-md-4">
+          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.4s">
+            <h4>Proporcionar Hogar y Amor</h4>
+            <div class="icon">
+              <i class="fa fa-heart-o fa-3x"></i>
+            </div>
+            <p>Nuestro objetivo es brindar un hogar seguro y amoroso a mascotas que han sido abandonadas o necesitan una segunda oportunidad. Creemos que cada mascota tiene el derecho a ser amada y cuidada, y nos esforzamos por encontrarles un hogar donde puedan vivir felices y ser amadas</p>
+            <div class="ficon">
+              <a href="#" class="btn btn-default" role="button">Leer Mas</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="1.0s">
+            <h4>Fomentar la Responsabilidad y la Educación</h4>
+            <div class="icon">
+              <i class="fa fa-user fa-4x"></i>
+            </div>
+            <p>Además de proporcionar hogar, también nos enfocamos en fomentar la responsabilidad y la educación sobre el cuidado de mascotas. Creemos que es fundamental que las personas comprendan las necesidades y los requisitos de los animales para poder cuidarlos de manera efectiva.</p>
+            <div class="ficon">
+              <a href="#" class="btn btn-default" role="button">Leer Mas</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="1.6s">
+            <h4>Promover la Adopción y la Protección</h4>
+            <div class="icon">
+            <i class="fa fa-gratipay fa-4x"  aria-hidden="true"></i>
+            </div>
+            <p>Finalmente, nuestro propósito es promover la adopción y la protección de mascotas. Creemos que la adopción es la mejor forma de salvar vidas y evitar que las mascotas sean abandonadas o maltratadas. Ofrecemos apoyo y recursos para que las personas puedan adoptar mascotas y darles un hogar seguro y amoroso.</p>
+            <div class="ficon">
+              <a href="#" class="btn btn-default" role="button">Leer Mas</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+
+</body>
+{% endblock %}
+</html>

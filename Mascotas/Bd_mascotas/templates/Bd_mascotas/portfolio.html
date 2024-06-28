@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% extends 'Bd_mascotas/base.html' %}
+  {% load static %}
+  {% block content %}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PetFriends Portafolio</title>
+
+  <style>
+    .productos-panel {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .productos-panel img {
+      width: 100%;
+      height: auto;
+      max-height: 250px; 
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="portfolios">
+          <div class="text-center">
+            <h2>Productos ofrecidos</h2>
+            <p>Los productos que ofrece PetFriends se basan en el cuidado, asea y belleza de tus mascotas , ademas ofrecemos productos 
+              alimenticios <br>
+            </p>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      {% for p in productos %}
+      <div class="col-md-3 productos-panel">
+        <div class="panel panel-default">
+          <img class="img-fluid" src="{{p.foto.url}}" alt="">
+          <div class="panel-body">
+            <strong>Producto:</strong> {{p.nom_pro}} <br>
+            <strong>Precio:</strong> {{p.precio_pro}} <br>
+            <strong>Descripción:</strong> {{p.desc_pro}} <br>
+            <strong>Stock:</strong> {{p.stock}}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+
+
+</body>
+{% endblock %}
+
+</html>

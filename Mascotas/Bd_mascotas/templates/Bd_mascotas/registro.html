@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'Bd_mascotas/base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="row contact-wrap">
+          <div class="col-md-8 col-md-offset-2">
+            <form id="passwordForm" action="" method="post" role="form" class="contactForm">
+              {% csrf_token %}
+              <div class="col-md-6">
+              <div class="form-group">
+                  <label>Ingrese su Id</label>
+                <input type="text" name="name" class="form-control" id="id" placeholder="Id" data-rule="id" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                  <label>Ingrese su usuario:</label>
+                <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Usuario" data-rule="usuario" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <label>Nombres:</label>
+              <input type="text" class="form-control" name="Nombres" id="Nombres" placeholder="Nombres" data-rule="Nombres" data-msg="Please enter a valid email" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+                <label>Apellidos:</label>
+              <input type="text" class="form-control" name="Apellidos" id="Apellidos" placeholder="Apellidos" data-rule="Apellidos" data-msg="Please enter a valid email" />
+              <div class="validation"></div>
+            </div>
+              <div class="form-group">
+                <label>Ingrese su correo:</label>
+              <input type="email" class="form-control" name="email" id="email" placeholder="Correo" data-rule="email" data-msg="Please enter a valid email" />
+              <div class="validation"></div>
+            </div>
+              </div>
+              <div class="col-md-6">
+            <div class="form-group">
+                <label>Telefono:</label>
+              <input type="text" class="form-control" name="telefono" id="telefono" placeholder="telefono" data-rule="telefono" data-msg="Please enter a valid email" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+                <label>Direccion:</label>
+              <input type="text" class="form-control" name="direccion" id="direccion" placeholder="direccion" data-rule="direccion" data-msg="Please enter a valid email" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+                <label>Seleccione Tipo Usuario:</label>
+                <input type="text" class="form-control" name="tipo" id="tipo" disabled="true" placeholder="cliente" value="cliente" >
+            </div>
+            <div class="form-group" >
+                <label>Contraseña:</label>
+              <input type="password" class="form-control password-toggle-icon" name="password" id="password" placeholder="Contraseña" data-rule="password" data-msg="Please enter a valid password" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+                <label>Confirme Contraseña</label>
+              <input required type="password" class="form-control password-toggle-icon" name="repassword" id="repassword" placeholder="Confirme Contraseña" data-rule="password" data-msg="Please enter a valid password" />
+              <div class="validation" id="validationMessage">
+                <p>Las contraseñas no coinciden</p>
+              </div>
+            </div>
+            
+              </div>
+  
+              <div class="text">
+                <a class="btn btn-primary btn-lg" href="/registrou/">Registrarme</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+      <script>
+        document.getElementById('repassword').addEventListener('input', function() {
+            const password = document.getElementById('password').value;
+            const repassword = document.getElementById('repassword').value;
+            const validationMessage = document.getElementById('validationMessage');
+
+            if (password !== repassword) {
+                validationMessage.style.display = 'block';
+            } else {
+                validationMessage.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+{% endblock %}
+</html> 
